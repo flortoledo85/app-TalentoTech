@@ -1,10 +1,12 @@
 import React from "react";
 
-export function Usercard({ nombre, profesion }){
+export function Usercard({ nombre, tarea, emoji }){
     return(
         <div>
-            <h2>{nombre}</h2>
-            <p>{profesion}</p>
+            <h3>{nombre}</h3>
+            <p>{tarea}
+                {emoji}
+            </p>
         </div>
     );
 }

@@ -12,7 +12,9 @@ export function OtroPerfil(){
     return(
         <div>
             <h2>Nombre</h2>
-            <p>Profesion</p>
+            <p>Tarea</p>
+            
+            
         </div>
     );
 }
