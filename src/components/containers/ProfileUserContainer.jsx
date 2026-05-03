@@ -1,5 +1,5 @@
 import React from "react";
-import { Usercard } from "./Usercard";
+import { Usercard } from "../cards/UserCard";
 
 export function Profileusercontainer(){
     const usuario = { nombre: "Matias", profesion: "Desarrollador" };
