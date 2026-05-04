@@ -1,5 +1,3 @@
-import React from "react";
-
 function Footer(){
     return(
         <footer style={{backgroundColor:"#00d9ff", color:"black", padding:"10px", 
