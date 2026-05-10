@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "name": "Pink Love",
+    "description": "Armazón de acetato negro exterior con rosa-fucsia interior. Forma redondeada. Medidas: ancho total 139 mm. Largo patilla: 145 mm. Alto lente: 44 mm. Ancho lente: 53 mm. DIP: 61 a 85 mm.",
+    "image": "/pictures/pink_love.jpg",
+    "stock": 15,
+    "price": 90000.00
+  },
+  {
+    "id": 2,
+    "name": "Cristal",
+    "description": "Armazón de acetato transparente cristal. Forma cuadrada. Medidas: ancho total 142 mm. Largo patilla: 147 mm. Alto lente: 45 mm. Ancho lente: 56 mm. DIP: 61 a 85 mm.",
+    "image": "/pictures/cristal.jpg",
+    "stock": 18,
+    "price": 120000.00
+  },
+  {
+    "id": 3,
+    "name": "Sol Bordo",
+    "description": "Anteojos de Sol con armazón bordo oscuro. Curvado envolvente. Medidas: ancho total 140 mm. Largo patilla: 145 mm. Alto lente: 44 mm. Ancho lente: 53 mm. DIP: 61 a 85 mm.",
+    "image": "/pictures/sunglasses.jpg",
+    "stock": 10,
+    "price": 198000.00
+  },
+  {
+    "id": 4,
+    "name": "Jaspeado",
+    "description": "Armazón acetato marrón jaspeado. Forma cuadrada Medidas: ancho total 141 mm. Largo patilla: 152 mm. Alto lente: 46 mm. Ancho lente: 53 mm. DIP: 61 a 85 mm.",
+    "image": "/pictures/jaspeado.jpg",
+    "stock": 5,
+    "price": 118000.00
+  },
+  {
+    "id": 5,
+    "name": "Negro Clásico",
+    "description": "Armazón metálico sólido, negro mate. Forma rectángular. Medidas: ancho total 143 mm. Largo patilla: 150 mm. Alto lente: 47 mm. Ancho lente: 54 mm. DIP: 62 a 86 mm.",
+    "image": "/pictures/negro_clasico.jpg",
+    "stock": 15,
+    "price": 95000.00
+  },
+  {
+    "id": 6,
+    "name": "Soft Coral",
+    "description": "Montura femenina estilo suave. Color: Coral transparente. Forma rectángular redondeados. Medidas: ancho total 138 mm. Largo patilla: 143 mm. Alto lente: 43 mm. Ancho lente: 52 mm. DIP: 60 a 84 mm.",
+    "image": "/pictures/soft_coral.jpg",
+    "stock": 18,
+    "price": 99000.00
+  },
+  {
+    "id": 7,
+    "name": "Urban Steel",
+    "description": "Armazón metálico liviano. Color: Plateado y cobre. Medidas: ancho total 145 mm. Largo patilla: 150 mm. Alto lente: 48 mm. Ancho lente: 55 mm. DIP: 63 a 87 mm.",
+    "image": "/pictures/urban_steel.jpg",
+    "stock": 15,
+    "price": 132000.00
+  },
+  {
+    "id": 8,
+    "name": "Retro 80",
+    "description": "Montura estilo redondo retro. Color: metalizado. Medidas: ancho total 140 mm. Largo patilla: 148 mm. Alto lente: 46 mm. Ancho lente: 54 mm. DIP: 61 a 85 mm.",
+    "image": "/pictures/retro_80.jpg",
+    "stock": 15,
+    "price": 113000.00
+  },
+  {
+    "id": 9,
+    "name": "Sol Espejado Amarillo",
+    "description": "Anteojos de Sol Murray. Lente espejado Amarillo reflectivo. Protección UV400. Medidas: ancho total 144 mm. Largo patilla: 147 mm. Alto lente: 50 mm. Ancho lente: 57 mm. DIP: 63 a 87 mm.",
+    "image": "/pictures/sol_espejado_amarillo.jpg",
+    "stock": 15,
+    "price": 160000.00
+  },
+  {
+    "id": 10,
+    "name": "Sol RB Polarizado",
+    "description": "Anteojos de Sol estilo RayBan negros (no original). Polarizado categoría 3. Medidas: ancho total 143 mm. Largo patilla: 148 mm. Alto lente: 48 mm. Ancho lente: 55 mm. DIP: 62 a 86 mm.",
+    "image": "/pictures/rayban_p.jpg",
+    "stock": 15,
+    "price": 210000.00
+  },
+  {
+    "id": 11,
+    "name": "Sol Celeste Tornasol",
+    "description": "Anteojos de Sol, exterior negro con interior celeste agua. Lentes espejados efecto tornasol azul-violeta. Medidas: ancho total 145 mm. Largo patilla: 150 mm. Alto lente: 49 mm. Ancho lente: 56 mm. DIP: 63 a 87 mm.",
+    "image": "/pictures/sun_reflective_beach.jpg",
+    "stock": 15,
+    "price": 175000.00
+  },
+  {
+    "id": 12,
+    "name": "Aire Minimalista",
+    "description": "Montura sin marco estilo minimalista. Color: Incoloro con bordes metálicos. Medidas: ancho total 142 mm. Largo patilla: 150 mm. Alto lente: 45 mm. Ancho lente: 54 mm. DIP: 62 a 86 mm.",
+    "image": "/pictures/aire_minimalista.jpg",
+    "stock": 15,
+    "price": 147000.00
+  },
+  {
+    "id": 13,
+    "name": "Rose Elegance",
+    "description": "Marco rosa metálico. Forma redondeada. Estilo elegante y juvenil. Medidas: ancho total 138 mm. Largo patilla: 142 mm. Alto lente: 43 mm. Ancho lente: 50 mm. DIP: 62 a 78 mm.",
+    "image": "/pictures/rose_elegance.jpg",
+    "stock": 15,
+    "price": 87000.00
+  },
+  {
+    "id": 14,
+    "name": "Golden Drop",
+    "description": "Marco redondeado inferior. Color dorado metálico. Diseño liviano y clásico. Medidas: ancho total 140 mm. Largo patilla: 145 mm. Alto lente: 46 mm. Ancho lente: 52 mm. DIP: 60 a 80 mm.",
+    "image": "/pictures/golden_drop.jpg",
+    "stock": 10,
+    "price": 95000.00
+  },
+  {
+    "id": 15,
+    "name": "Red Impact",
+    "description": "Anteojos de lectura. Marco acetato color rojo intenso exterior con transparente interior. Forma rectangular. Medidas: ancho total 137 mm. Largo patilla: 140 mm. Alto lente: 38 mm. Ancho lente: 50 mm. DIP: 61 a 79 mm.",
+    "image": "/pictures/red_impact.jpg",
+    "stock": 7,
+    "price": 60000.00
+  },
+  {
+    "id": 16,
+    "name": "Print Wild",
+    "description": "Media montura superior con estilo animal print. Material plástico resistente. Medidas: ancho total 141 mm. Largo patilla: 147 mm. Alto lente: 42 mm. Ancho lente: 54 mm. DIP: 63 a 82 mm.",
+    "image": "/pictures/print_wild.jpg",
+    "stock": 10,
+    "price": 110000.00
+  },
+  {
+    "id": 17,
+    "name": "Dual Shadow",
+    "description": "Anteojos de lectura. Marcos acetato negros exterior con azul interior. Forma rectangular moderna. Medidas: ancho total 139 mm. Largo patilla: 145 mm. Alto lente: 40 mm. Ancho lente: 52 mm. DIP: 62 a 84 mm.",
+    "image": "/pictures/dual_shadow.jpg",
+    "stock": 12,
+    "price": 72000.00
+  },
+  {
+    "id": 18,
+    "name": "Sun Fire Yellow",
+    "description": "Anteojos de sol. Filtro amarillo, no espejados. Estilo urbano, ideal conducción. Medidas: ancho total 145 mm. Largo patilla: 150 mm. Alto lente: 48 mm. Ancho lente: 56 mm. DIP: 64 a 85 mm.",
+    "image": "/pictures/sun_fire_yellow.jpg",
+    "stock": 14,
+    "price": 138000.00
+  },
+  {
+    "id": 19,
+    "name": "Polar Night",
+    "description": "Anteojos polarizados. Media montura superior. Filtro degradé negro. Estilo deportivo. Medidas: ancho total 146 mm. Largo patilla: 148 mm. Alto lente: 45 mm. Ancho lente: 57 mm. DIP: 65 a 86 mm.",
+    "image": "/pictures/polar_night.jpg",
+    "stock": 19,
+    "price": 205000.00
+  },
+  {
+    "id": 20,
+    "name": "Crystal Hexa",
+    "description": "Marco acetato transparente cristal. Forma redonda con contorno hexagonal sutil. Moderno y ligero. Medidas: ancho total 143 mm. Largo patilla: 147 mm. Alto lente: 44 mm. Ancho lente: 49 mm. DIP: 61 a 83 mm.",
+    "image": "/pictures/crystal_hexa.jpg",
+    "stock": 10,
+    "price": 125000.00
+  },
+  {
+    "id": 21,
+    "name": "Blue Dream",
+    "description": "Marco acetato degrade negro a azul. Forma redondeada. Moderno y ligero. Medidas: ancho total 141 mm. Largo patilla: 151 mm. Alto lente: 55 mm. Ancho lente: 59 mm. DIP: 59 a 78 mm.",
+    "image": "/pictures/blue_dream.jpg",
+    "stock": 10,
+    "price": 122000.00
+  }
+]

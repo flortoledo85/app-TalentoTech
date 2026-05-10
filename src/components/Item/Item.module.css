@@ -40,13 +40,20 @@
 }
 
 .name:hover {
-  color: #cd551d;
+  color: #00d9ff;
 }
 
 .precio {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   padding: 1rem 0;
+}
+
+.star{
+  font-size: 24px;
+  cursor: pointer;
+  color:  var(--color-star); 
+  transition: color 0.2s ease;
 }
 
 .counter{
