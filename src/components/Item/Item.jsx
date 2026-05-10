@@ -37,7 +37,7 @@ export function Item({ id, image, name, price, stock }) {
                 <p>{counter}</p>
                 <button onClick={increment}>+</button>
             </div>
-            <button onClick={CompraClick}>Agregar al Carrito</button>
+            <button onClick={CompraClick} className={styles.addToCart}>Agregar al Carrito</button>
         </div>
     );
 }
