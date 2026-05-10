@@ -12,6 +12,13 @@
   color: aliceblue;
   border-radius: 10px;
   overflow: hidden;
+  transition: transform 0.2s, border-shadow 0.2s;
+  cursor: pointer;
+}
+
+.producto:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 217, 255, 0.7);
 }
 
 .h3{
@@ -29,10 +36,10 @@
 }
 
 
-.nombre {
+.name {
   text-align: center;
   font-family: "Inter", sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: aliceblue;
   cursor: pointer;
@@ -43,7 +50,7 @@
   color: #00d9ff;
 }
 
-.precio {
+.price {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   padding: 1rem 0;
@@ -60,6 +67,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px 0;
+    margin: 10px 10px;
     gap: 0.2rem;
 }

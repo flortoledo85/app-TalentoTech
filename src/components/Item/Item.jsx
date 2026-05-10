@@ -26,7 +26,7 @@ export function Item({ id, image, name, price, stock }) {
         <div className={styles.producto}>
             <img src={image} alt={name} className={styles.img}></img>
             <h3 className={styles.name}>{name}</h3>
-            <p className={styles.precio}>Precio: ${price}</p>
+            <p className={styles.price}>Precio: ${price}</p>
             <span onClick={toggleFavourite} className={styles.star} style={{'--color-star': favourite ? '#FFD700' :' #ccc'}}>{favourite ? '★' : '☆'}</span>
             {/* El codigo abajo es como utilizar las propiedades de svg para lograr el mismo efecto sin css comentar
             linea 30 y descomentar 33 para ver efecto*/}
