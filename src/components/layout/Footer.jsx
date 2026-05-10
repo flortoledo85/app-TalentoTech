@@ -1,7 +1,9 @@
+import './Footer.css';
+
+
 function Footer(){
     return(
-        <footer style={{backgroundColor:"#00d9ff", color:"black", padding:"10px", 
-            textAlign:"center", marginTop:"20px",}}>
+        <footer className="footer">
                 <p>&copy; 2026 - Optic Choices</p>
         </footer>
     );
