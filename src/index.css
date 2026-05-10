@@ -25,6 +25,28 @@ a {
 }
 
 
+h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 3rem;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+h2 {
+    font-size: 1.75rem; 
+    font-family: 'Manrope', sans-serif;
+    font-style: italic;
+    text-align: center;
+    margin-top: 2vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    color: #cd551d;
+}
+
+
+
+
+
 :root {
   min-height: 100vh;
 

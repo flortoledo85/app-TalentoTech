@@ -1,6 +1,6 @@
 import './App.css';
 import { ItemListCotainer } from './components/ItemListCotainer/ItemListContainer';
-import { Layout } from './components/layout/Layout';
+import { Layout } from './components/Layout/Layout';
  
 
 function App() {
