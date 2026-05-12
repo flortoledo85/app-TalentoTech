@@ -30,6 +30,12 @@ export function ItemListCotainer({ Mensaje }) {
     //     {id: '1244', nombre: 'Ray Ban', precio: 450000, stock: 10, imagen: '/pictures/rayban_p.jpg'},
     //     {id: '1254', nombre: 'Armonic', precio: 190000, stock: 18, imagen: '/pictures/cristal.jpg'},
     // ];
+    if (cargado) {
+        return <p className={styles.subtitulo}>Cargando productos, por favor espere...</p>;
+    }
+    if (error) {
+        return <p className={styles.subitulo}>Error: {error}</p>;
+    }
     return (
         <div>
             <h2 className={styles.subtitulo}> {Mensaje} </h2>
