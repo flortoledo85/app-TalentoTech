@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { FormProduct } from "./FormProduct";
+import styles from "./FormContainer.module.css"
 
 export function FormContainer() {
     const [dataForm, setDataForm] = useState({
@@ -43,10 +44,12 @@ export function FormContainer() {
     };
 
     return (
-        <FormProduct
-        datosForm={dataForm}
-        handleChange={handleChange}
-        handleSend={handleSend}
-        handleImageChange={handleImageChange}/>
+        <div className={styles.containerForm}>
+            <FormProduct
+            datosForm={dataForm}
+            handleChange={handleChange}
+            handleSend={handleSend}
+            handleImageChange={handleImageChange}/>
+        </div>
     );
 }
