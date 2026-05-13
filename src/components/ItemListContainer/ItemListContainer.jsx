@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import styles from "./ItemListContainer.module.css"
 
-export function ItemListCotainer({ Mensaje }) {
+export function ItemListContainer({ Mensaje }) {
     const [productos, setProducto] = useState([]);
     const [error, setError] = useState(null);
     const [cargado, setCargado] = useState(true);
