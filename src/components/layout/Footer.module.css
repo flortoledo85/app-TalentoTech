@@ -1,0 +1,45 @@
+.footer {
+    border-top: 1px solid #00d9ff;
+    background-color: rgba(26, 26, 26, 0.95);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    color: aliceblue;
+    font-family: "Inter", sans-serif;
+    margin-top: auto;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact h3 {
+    color: #00d9ff;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.team h4 {
+    text-align: center;
+    color: #00d9ff;
+    margin-bottom: 1rem;
+}
+
+.cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.copy {
+    font-size: 0.8rem;
+    color: #666;
+}

@@ -1,0 +1,32 @@
+.card {
+    width: 160px;
+    background-color: rgba(26, 26, 26, 0.95);
+    border: 2px solid #00d9ff;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: aliceblue;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+.imagen {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00d9ff;
+}
+
+.card h3 {
+    font-size: 0.95rem;
+    color: #00d9ff;
+}
+
+.card p {
+    font-size: 0.85rem;
+    color: #ccc;
+}
