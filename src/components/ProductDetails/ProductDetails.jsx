@@ -17,11 +17,11 @@ const ProductDetail = () => {
     }, [id]);
 
     if (!product) {
-        return <h2>Loading product details...</h2>;
+        return <h2 className={styles.name}>Loading product details...</h2>;
     }
 
     if (!product.id) {
-        return <h2>Product not founded...</h2>;
+        return <h2 className={styles.name}>Product not founded...</h2>;
     }
 
     return (
