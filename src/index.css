@@ -36,7 +36,7 @@ h2 {
     font-size: 1.75rem; 
     font-family: 'Manrope', sans-serif;
     font-style: italic;
-    text-align: center;
+    /* text-align: center; */
     margin-top: 2vh;
     margin-left: 15vw;
     margin-right: 15vw;

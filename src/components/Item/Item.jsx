@@ -1,5 +1,6 @@
-import { useState } from "react";
-import styles from "./Item.module.css"
+import React, { useState, useEffect } from "react";
+import styles from "./Item.module.css";
+import { Link } from "react-router-dom";
 
 
 export function Item({ id, image, name, price, stock }) {
@@ -24,9 +25,11 @@ export function Item({ id, image, name, price, stock }) {
     const CompraClick = () => { };
     return (
         <div className={styles.producto}>
-            <img src={image} alt={name} className={styles.img}></img>
-            <h3 className={styles.name}>{name}</h3>
-            <p className={styles.price}>Precio: ${price}</p>
+            <Link to={`/producto/${id}`}>
+                <img src={image} alt={name} className={styles.img}></img>
+                <h3 className={styles.name}>{name}</h3>
+                <p className={styles.price}>Precio: ${price}</p>
+            </Link>
             <span onClick={toggleFavourite} className={styles.star} style={{'--color-star': favourite ? '#FFD700' :' #ccc'}}>{favourite ? '★' : '☆'}</span>
             {/* El codigo abajo es como utilizar las propiedades de svg para lograr el mismo efecto sin css comentar
             linea 30 y descomentar 33 para ver efecto*/}
