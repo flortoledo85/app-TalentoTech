@@ -25,7 +25,7 @@ export function Item({ id, image, name, price, stock }) {
     const CompraClick = () => { };
     return (
         <div className={styles.producto}>
-            <Link to={`/producto/${id}`}>
+            <Link to={`/products/${id}`}>
                 <img src={image} alt={name} className={styles.img}></img>
                 <h3 className={styles.name}>{name}</h3>
                 <p className={styles.price}>Precio: ${price}</p>
