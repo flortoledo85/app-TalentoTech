@@ -42,15 +42,15 @@
 
 .description {
     font-size: 1rem;
-    color: #ccc;
+    color: #b1a242;
     line-height: 1.6;
     /* max-width: 300px; */
 }
 
 .price {
-    font-size: 1.5rem;
+    font-size: 1.rem;
     color: #00d9ff;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .counter{
@@ -79,6 +79,8 @@
 .counter button:hover {
   background: #00d9ff;
   color: #0f0f0f;
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 6px #FFD700);
 }
 
 .counter p {
@@ -102,4 +104,6 @@
 .addToCart:hover {
   background: #00d9ff;
   color: #0f0f0f;
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 6px #FFD700);
 }
