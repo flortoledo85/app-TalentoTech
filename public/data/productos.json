@@ -5,7 +5,7 @@
     "description": "Armazón de acetato negro exterior con rosa-fucsia interior. Forma redondeada. Medidas: ancho total 139 mm. Largo patilla: 145 mm. Alto lente: 44 mm. Ancho lente: 53 mm. DIP: 61 a 85 mm.",
     "image": "/pictures/pink_love.jpg",
     "stock": 15,
-    "price": 90000.00
+    "price": 9000.00
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "Armazón de acetato transparente cristal. Forma cuadrada. Medidas: ancho total 142 mm. Largo patilla: 147 mm. Alto lente: 45 mm. Ancho lente: 56 mm. DIP: 61 a 85 mm.",
     "image": "/pictures/cristal.jpg",
     "stock": 18,
-    "price": 120000.00
+    "price": 12000.00
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "Anteojos de Sol con armazón bordo oscuro. Curvado envolvente. Medidas: ancho total 140 mm. Largo patilla: 145 mm. Alto lente: 44 mm. Ancho lente: 53 mm. DIP: 61 a 85 mm.",
     "image": "/pictures/sunglasses.jpg",
     "stock": 10,
-    "price": 198000.00
+    "price": 19800.00
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "description": "Armazón acetato marrón jaspeado. Forma cuadrada Medidas: ancho total 141 mm. Largo patilla: 152 mm. Alto lente: 46 mm. Ancho lente: 53 mm. DIP: 61 a 85 mm.",
     "image": "/pictures/jaspeado.jpg",
     "stock": 5,
-    "price": 118000.00
+    "price": 11800.00
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "description": "Armazón metálico sólido, negro mate. Forma rectángular. Medidas: ancho total 143 mm. Largo patilla: 150 mm. Alto lente: 47 mm. Ancho lente: 54 mm. DIP: 62 a 86 mm.",
     "image": "/pictures/negro_clasico.jpg",
     "stock": 15,
-    "price": 95000.00
+    "price": 9500.00
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "description": "Montura femenina estilo suave. Color: Coral transparente. Forma rectángular redondeados. Medidas: ancho total 138 mm. Largo patilla: 143 mm. Alto lente: 43 mm. Ancho lente: 52 mm. DIP: 60 a 84 mm.",
     "image": "/pictures/soft_coral.jpg",
     "stock": 18,
-    "price": 99000.00
+    "price": 9900.00
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "description": "Armazón metálico liviano. Color: Plateado y cobre. Medidas: ancho total 145 mm. Largo patilla: 150 mm. Alto lente: 48 mm. Ancho lente: 55 mm. DIP: 63 a 87 mm.",
     "image": "/pictures/urban_steel.jpg",
     "stock": 15,
-    "price": 132000.00
+    "price": 13200.00
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "description": "Montura estilo redondo retro. Color: metalizado. Medidas: ancho total 140 mm. Largo patilla: 148 mm. Alto lente: 46 mm. Ancho lente: 54 mm. DIP: 61 a 85 mm.",
     "image": "/pictures/retro_80.jpg",
     "stock": 15,
-    "price": 113000.00
+    "price": 11300.00
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "description": "Anteojos de Sol Murray. Lente espejado Amarillo reflectivo. Protección UV400. Medidas: ancho total 144 mm. Largo patilla: 147 mm. Alto lente: 50 mm. Ancho lente: 57 mm. DIP: 63 a 87 mm.",
     "image": "/pictures/sol_espejado_amarillo.jpg",
     "stock": 15,
-    "price": 160000.00
+    "price": 16000.00
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "description": "Anteojos de Sol estilo RayBan negros (no original). Polarizado categoría 3. Medidas: ancho total 143 mm. Largo patilla: 148 mm. Alto lente: 48 mm. Ancho lente: 55 mm. DIP: 62 a 86 mm.",
     "image": "/pictures/rayban_p.jpg",
     "stock": 15,
-    "price": 210000.00
+    "price": 21000.00
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "description": "Anteojos de Sol, exterior negro con interior celeste agua. Lentes espejados efecto tornasol azul-violeta. Medidas: ancho total 145 mm. Largo patilla: 150 mm. Alto lente: 49 mm. Ancho lente: 56 mm. DIP: 63 a 87 mm.",
     "image": "/pictures/sun_reflective_beach.jpg",
     "stock": 15,
-    "price": 175000.00
+    "price": 17500.00
   },
   {
     "id": 12,
@@ -93,6 +93,6 @@
     "description": "Montura sin marco estilo minimalista. Color: Incoloro con bordes metálicos. Medidas: ancho total 142 mm. Largo patilla: 150 mm. Alto lente: 45 mm. Ancho lente: 54 mm. DIP: 62 a 86 mm.",
     "image": "/pictures/aire_minimalista.jpg",
     "stock": 15,
-    "price": 147000.00
+    "price": 14700.00
   }
 ]
