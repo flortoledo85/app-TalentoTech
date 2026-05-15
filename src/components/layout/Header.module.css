@@ -2,7 +2,34 @@
     background-color:#103d79;
     color:white;
     padding:20px;
-    text-align: center;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
+.header nav {
+    margin-left: auto;
+}
+
+.header h1 {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    white-space: nowrap;
+}
+
+.header nav a span {
+    background-color: #ff4444;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -8px;
+    right: -12px;
+}

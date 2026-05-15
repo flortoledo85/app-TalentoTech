@@ -1,9 +1,22 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Item.module.css";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 
 export function Item({ id, image, name, price, stock }) {
+
+    const product = { id, image, name, price, stock };
+
+    // const [quantity, setQuantity] = useState(0);
+
+    const { addToCart } = useCart();
+
+    const handleAddToCart = () => {
+        if (counter > 0) {
+            addToCart(product, counter);
+        };
+    };
 
     const [favourite, setFavourite] = useState(false);
     
@@ -22,7 +35,7 @@ export function Item({ id, image, name, price, stock }) {
             setCounter(counter - 1);
         };
     };
-    const CompraClick = () => { };
+    // const CompraClick = () => { };
     return (
         <div className={styles.producto}>
             <Link to={`/products/${id}`}>
@@ -40,7 +53,7 @@ export function Item({ id, image, name, price, stock }) {
                 <p>{counter}</p>
                 <button onClick={increment}>+</button>
             </div>
-            <button onClick={CompraClick} className={styles.addToCart}>Add to Cart</button>
+            <button onClick={handleAddToCart} className={styles.addToCart}>Add {counter} to Cart</button>
         </div>
     );
 }
