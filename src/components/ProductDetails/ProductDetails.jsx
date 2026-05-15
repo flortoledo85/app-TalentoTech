@@ -5,6 +5,20 @@ import styles from "./ProductDetails.module.css"
 const ProductDetail = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
+    const [counter, setCounter] = useState(0);
+
+    const increment = () => {
+        if (counter < product.stock) {
+            setCounter(counter + 1);
+        };
+    };
+    
+    const decrement = () => {
+        if (counter >= 1) {
+            setCounter(counter - 1);
+        };
+    };
+    const CompraClick = () => { };
 
     useEffect(() => {
         fetch('/data/productos.json')
@@ -31,6 +45,13 @@ const ProductDetail = () => {
                 <h2 className={styles.name}>{product.name}</h2>
                 <h3 className={styles.price}>${product.price}</h3>
                 <p className={styles.description}>{product.description}</p>
+                <p className={styles.price}>Stock: {product.stock}</p>
+                <div className={styles.counter}>
+                    <button onClick={decrement}>-</button>
+                    <p>{counter}</p>
+                    <button onClick={increment}>+</button>
+                </div>
+                <button onClick={CompraClick} className={styles.addToCart}>Add to Cart</button>
             </div>
         </div>
     );

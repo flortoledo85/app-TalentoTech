@@ -3,7 +3,7 @@
     flex-direction: row;
     gap: 2rem;
     padding: 2rem;
-    align-items: flex-start;
+    align-items: center;
     color: aliceblue;
     font-family: "Inter", sans-serif;
     max-width: 1000px;
@@ -12,7 +12,7 @@
 
 .image {
     width: 65%;
-    height: 450px;
+    height: 500px;
     object-fit: cover;
     display: block;
     border-radius: 10px;
@@ -22,8 +22,7 @@
 .info {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    justify-content: left;
+    gap: 0.5rem;
     max-width: 250px;
 }
 
@@ -46,4 +45,55 @@
     font-size: 1.5rem;
     color: #00d9ff;
     font-weight: 700;
+}
+
+.counter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px;
+    gap: 0.2rem;
+}
+
+.counter button {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #00d9ff;
+  background: transparent;
+  color: #00d9ff;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter button:hover {
+  background: #00d9ff;
+  color: #0f0f0f;
+}
+
+.counter p {
+  min-width: 24px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.addToCart {
+  width: 100%;
+  padding: 0.5rem;
+  background: transparent;
+  border: 2px solid #00d9ff;
+  color: #00d9ff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.addToCart:hover {
+  background: #00d9ff;
+  color: #0f0f0f;
 }
