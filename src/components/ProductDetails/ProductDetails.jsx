@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import styles from "./ProductDetails.module.css"
+import styles from "./ProductDetails.module.css";
+import { useCart } from "../context/CartContext";
+
 
 const ProductDetail = () => {
+
+    const { addToCart } = useCart();
+
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [counter, setCounter] = useState(0);
@@ -18,7 +23,12 @@ const ProductDetail = () => {
             setCounter(counter - 1);
         };
     };
-    const CompraClick = () => { };
+
+    const handleAddToCart = () => {
+    if (counter > 0) {
+        addToCart(product, counter);
+       };
+    };
 
     useEffect(() => {
         fetch('/data/productos.json')
@@ -51,7 +61,7 @@ const ProductDetail = () => {
                     <p>{counter}</p>
                     <button onClick={increment}>+</button>
                 </div>
-                <button onClick={CompraClick} className={styles.addToCart}>Add to Cart</button>
+                <button onClick={handleAddToCart} className={styles.addToCart}>Add {counter} to Cart</button>
             </div>
         </div>
     );

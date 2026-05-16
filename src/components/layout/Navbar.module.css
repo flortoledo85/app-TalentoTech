@@ -1,5 +1,7 @@
 .nav {
+    position: relative;
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 2rem;
     padding: 0.8rem 2rem;
@@ -8,6 +10,10 @@
 }
 
 .nav a {
+    position: relative;
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
     color: aliceblue;
     font-size: 1rem;
     transition: color 0.2s;

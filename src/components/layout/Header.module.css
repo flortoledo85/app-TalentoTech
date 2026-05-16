@@ -11,6 +11,12 @@
     margin-left: auto;
 }
 
+.header nav a {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 .header h1 {
     margin: 0;
     position: absolute;
@@ -20,16 +26,17 @@
 }
 
 .header nav a span {
-    background-color: #ff4444;
-    color: white;
+    background-color: #103d79;
+    color: #FFD700;
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    font-size: 12px;
+    font-size: medium;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     top: -8px;
     right: -12px;
+    font-weight: 900;
 }

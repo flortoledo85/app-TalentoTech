@@ -1,12 +1,13 @@
 .cartContainer {
-    max-width: 800px;
+    max-width: 100%;
+    height: auto;
     margin: 2rem auto;
     padding: 2rem;
     color: #fff;
 }
 
 .subtotal {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #fff;
     font-weight: bold;
     white-space: nowrap;
@@ -32,11 +33,11 @@
 }
 
 .itemImage {
-    width: 60px;
-    height: 60px;
+    width: 280px;
+    height: 180px;
+    border-radius: 10%;
     object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid #00d9ff33;
+    border: 2px solid #00d9ff;
 }
 
 .itemCard:hover {
@@ -45,15 +46,16 @@
 
 .itemInfo h4 {
     margin: 0 0 0.4rem 0;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     color: #00d9ff;
 }
 
 .itemInfo p {
     margin: 0.2rem 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #ccc;
 }
+
 
 .divider {
     border: none;
@@ -68,7 +70,7 @@
 }
 
 .total {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #00d9ff;
 }
 

@@ -4,7 +4,7 @@ import styles from "./FormContainer.module.css"
 
 export function FormContainer() {
     const [dataForm, setDataForm] = useState({
-        nombre: '',
+        name: '',
         price: '',
         stock: ''
     });

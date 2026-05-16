@@ -64,10 +64,9 @@
 }
 
 .star:hover{
-  transform: scale(1.3);
+  transform: scale(1.5);
   filter: drop-shadow(0 0 6px #FFD700);
 }
-
 
 .counter{
     display: flex;
@@ -95,6 +94,8 @@
 .counter button:hover {
   background: #00d9ff;
   color: #0f0f0f;
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 6px #FFD700);
 }
 
 .counter p {
@@ -118,4 +119,5 @@
 .addToCart:hover {
   background: #00d9ff;
   color: #0f0f0f;
+  filter: drop-shadow(0 0 6px #FFD700);
 }
