@@ -6,11 +6,12 @@ import { useCart } from "../context/CartContext";
 
 const ProductDetail = () => {
 
-    const { addToCart } = useCart();
+    const { addToCart, getUpdatedQuantity } = useCart();
 
     const { id } = useParams();
     const [product, setProduct] = useState(null);
-    const [counter, setCounter] = useState(0);
+    const updatedQuantity = getUpdatedQuantity(parseInt(id));
+    const [counter, setCounter] = useState(updatedQuantity);
 
     const increment = () => {
         if (counter < product.stock) {
@@ -26,7 +27,7 @@ const ProductDetail = () => {
 
     const handleAddToCart = () => {
     if (counter > 0) {
-        addToCart(product, counter);
+        addToCart(product, counter - updatedQuantity);
        };
     };
 

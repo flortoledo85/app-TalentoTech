@@ -8,21 +8,23 @@ export function Item({ id, image, name, price, stock }) {
 
     const product = { id, image, name, price, stock };
 
-    // const [quantity, setQuantity] = useState(0);
+    const { addToCart, getUpdatedQuantity } = useCart();
 
-    const { addToCart } = useCart();
+    const updatedQuantity = getUpdatedQuantity(product.id);
+
+    const [counter, setCounter] = useState(updatedQuantity);
+
+    // const [quantity, setQuantity] = useState(0);
 
     const handleAddToCart = () => {
         if (counter > 0) {
-            addToCart(product, counter);
+            addToCart(product, counter - updatedQuantity);
         };
     };
 
     const [favourite, setFavourite] = useState(false);
     
     const toggleFavourite = () => {setFavourite(!favourite)};
-    
-    const [counter, setCounter] = useState(0);
     
     const increment = () => {
         if (counter < stock) {
@@ -40,7 +42,7 @@ export function Item({ id, image, name, price, stock }) {
         <div className={styles.producto}>
             <Link to={`/products/${id}`}>
                 <img src={image} alt={name} className={styles.img}></img>
-                <h3 className={styles.name}>{name}</h3>
+                 <h3 className={styles.name}>{name}</h3>
                 <p className={styles.price}>Price: ${price}</p>
             </Link>
             <span onClick={toggleFavourite} className={styles.star} style={{'--color-star': favourite ? '#FFD700' :' #ccc'}}>{favourite ? '★' : '☆'}</span>

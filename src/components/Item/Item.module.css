@@ -64,7 +64,7 @@
 }
 
 .star:hover{
-  transform: scale(1.5);
+  transform: scale(1.8);
   filter: drop-shadow(0 0 6px #FFD700);
 }
 

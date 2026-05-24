@@ -28,6 +28,11 @@ export const CartProvider = ({ children }) => {
         }
     };
 
+    const getUpdatedQuantity = (productId) => {
+        const item = cart.find(item => item.id === productId);
+        return item ? item.quantity : 0;
+    };
+
     const clearCart = () => {
         setCart([]);
     };
@@ -41,7 +46,7 @@ export const CartProvider = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, clearCart, getCartQuantity, getCartTotal }}>
+        <CartContext.Provider value={{ cart, addToCart, getUpdatedQuantity, clearCart, getCartQuantity, getCartTotal }}>
             { children }
         </CartContext.Provider>
     );
