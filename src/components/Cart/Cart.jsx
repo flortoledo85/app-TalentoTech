@@ -37,6 +37,7 @@ const Cart = () => {
             <hr className={styles.divider} />
             <div className={styles.footer}>
                 <h3 className={styles.total}>Total: ${getCartTotal()}</h3>
+                <Link to="/products" className={styles.backbtn}>Continue Shop</Link>
                 <Link to="/" onClick={()=>alert("Thanks for buying with us...")} className={styles.buynowbtn}>Buy now</Link>
                 <button onClick={clearCart} className={styles.clearButton}>Empty Cart</button>
             </div>
