@@ -1,6 +1,6 @@
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../../context/CartContext";
 import { ShoppingCart } from "lucide-react";
 
 function Header(){
