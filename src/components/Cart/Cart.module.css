@@ -44,6 +44,16 @@
     box-shadow: 0 4px 20px rgba(0, 217, 255, 0.25);
 }
 
+.itemInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
 .itemInfo h4 {
     margin: 0 0 0.4rem 0;
     font-size: 1.8rem;
@@ -56,6 +66,17 @@
     color: #ccc;
 }
 
+.removeBtn {
+    margin-left: 1rem;
+    color: #ff4d4d;
+    flex-shrink: 0;
+    transition: 02s;
+}
+
+.removeBtn:hover {
+    color: #ff0000;
+    filter: drop-shadow(0 0 4px #ff4d4d);
+}
 
 .divider {
     border: none;
@@ -138,3 +159,38 @@
     color: #0f0f0f;
     filter: drop-shadow(0 0 6px #FFD700);
 }
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.counter button {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #00d9ff;
+    background: transparent;
+    color: #00d9ff;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter button:hover {
+    background: #00d9ff;
+    color: #0f0f0f;
+}
+
+.counter p {
+    min-width: 24px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+

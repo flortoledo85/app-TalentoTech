@@ -7,7 +7,7 @@ import { Trash2 } from "lucide-react";
 
 const Cart = () => {
 
-    const { cart, removeItem, isInCart, clearCart, getCartTotal } = useCart();
+    const { cart, removeItem, incrementItem, decrementItem, isInCart, clearCart, getCartTotal } = useCart();
 
     if (cart.length === 0) {
         return (
@@ -27,11 +27,15 @@ const Cart = () => {
                     <img src={item.image} alt={item.name} className={styles.itemImage} />
                     <div className={styles.itemInfo}>
                         <h4>{item.name}</h4>
-                        <p>Quantity: {item.quantity}</p>
+                        <div className={styles.counter}><button onClick={() =>decrementItem(item.id)}>-</button>
+                        <p>{item.quantity}</p>
+                        <button onClick={() =>incrementItem(item.id)}>+</button></div>
                         <p>Unit Price: ${item.price}</p>
                     </div>
                     <p className={styles.subtotal}>Subtotal: ${item.price * item.quantity}</p>
-                    <Link to="/cart" onClick={()=>removeItem(item.id)}><Trash2 size={24} /></Link>
+                    <Link to="/cart" onClick={()=>removeItem(item.id)} className={styles.removeBtn}>
+                        <Trash2 size={24} />
+                    </Link>
                 </div>
             ))}
             <hr className={styles.divider} />
