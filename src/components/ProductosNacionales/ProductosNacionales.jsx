@@ -21,14 +21,14 @@ const ProductosNacionales = () => {
     return (
         <div className={styles.producto}>
             <h1>National Products</h1>
-            <div className="list-prodcts">
+            <div className={styles.list}>
                 {products.map(prod => (
-                    <div key={prod.id}>
-                        <Link to={'/producto/${prod.id}'}>
-                            <img src={prod.image} alt={prod.name} className={styles.img}/>
+                    <div key={prod.id} className={styles.card}>
+                        <Link to={`/producto/${prod.id}`}>
+                            <img src={prod.urlImage} alt={prod.name} className={styles.img}/>
                             <h3 className={styles.name}>{prod.name}</h3>
                         </Link>
-                        <p>Description: {prod.description}</p>
+                        <p>Description: {prod.details}</p>
                         <p className={styles.price}>Price: ${prod.price}</p>
                         <p>Stock: {prod.stock}</p>
                         <hr />

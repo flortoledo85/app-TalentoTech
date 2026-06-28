@@ -44,6 +44,22 @@
   box-shadow: 0 0 6px rgba(0, 255, 136, 0.3);
 }
 
+.input select {
+  background: transparent;
+  border: 1px solid #00d9ff;
+  border-radius: 6px;
+  padding: 0.5rem;
+  color: aliceblue;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.input select option {
+  background-color: #0f0f0f;
+  color: aliceblue;
+}
+
 .formulario button {
   padding: 0.6rem;
   background: transparent;

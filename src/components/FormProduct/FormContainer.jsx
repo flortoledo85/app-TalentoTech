@@ -1,12 +1,15 @@
 import React, {useState} from "react";
 import { FormProduct } from "./FormProduct";
-import styles from "./FormContainer.module.css"
+import styles from "./FormContainer.module.css";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 export function FormContainer() {
     const [dataForm, setDataForm] = useState({
+        details: '',
         name: '',
         price: '',
-        stock: ''
+        stock: '',
+        category: ''
     });
 
     const [imageFile, setImageFile] = useState(null);
@@ -49,6 +52,9 @@ export function FormContainer() {
 
             const fullProduct = { ...dataForm, urlImage: urlImage};
             console.log('The product is ready for send: ', fullProduct);
+            const db = getFirestore();
+            const productsCollection = collection(db, "productos-nacionales");
+            await addDoc(productsCollection, fullProduct);
             } else {
                 throw new Error("Failed upload to Imgbb.");
             }
