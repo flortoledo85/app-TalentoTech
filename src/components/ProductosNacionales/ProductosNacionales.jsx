@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { db } from '../../firebase/config';
 import { Link } from "react-router-dom";
+import { ItemList } from '../ItemList/ItemList';
 import styles from "./ProductosNacionales.module.css"
 
 const ProductosNacionales = () => {
@@ -12,16 +13,18 @@ const ProductosNacionales = () => {
         getDocs(productDB).then((resp) => {
             setProducts(
                 resp.docs.map((doc) => {
-                    return{...doc.data(), id: doc.id}
+                    return{...doc.data(), id: doc.id, 
+                        image: doc.data().urlImage || doc.data().image }
                 })
             );
         })
     }, []);
 
     return (
-        <div className={styles.producto}>
+        <div>
             <h1>National Products</h1>
-            <div className={styles.list}>
+            <ItemList productos={products}>
+            {/* <div className={styles.list}>
                 {products.map(prod => (
                     <div key={prod.id} className={styles.card}>
                         <Link to={`/producto/${prod.id}`}>
@@ -32,9 +35,9 @@ const ProductosNacionales = () => {
                         <p className={styles.price}>Price: ${prod.price}</p>
                         <p>Stock: {prod.stock}</p>
                         <hr />
-                    </div>
-                ))}
-            </div>
+                    </div> */}
+                {/* ))} */}
+            </ItemList>
         </div>
     );
 };
