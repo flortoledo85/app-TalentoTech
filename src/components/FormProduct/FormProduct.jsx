@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./FormProduct.module.css"
 
-export function FormProduct({datosForm, handleChange, handleSend, handleImageChange}) {
+export function FormProduct({datosForm, handleChange, handleSend, handleImageChange, previewUrl, cancelEdit, productEdit, editionMode}) {
     return(
         <form className={styles.formulario} onSubmit={handleSend}>
-            <h3>Add New Product</h3>
+            <h3>{editionMode ? 'Edit Product' : 'Add New Product'}</h3>
             <div className={styles.input}>
                 <label>Name: </label>
                 <input type="text" placeholder="Ej: rayban 1950" name="name" value={datosForm.name} onChange={handleChange}></input>
@@ -32,10 +32,13 @@ export function FormProduct({datosForm, handleChange, handleSend, handleImageCha
             </div>
             <div className={styles.input}>
                 <label>Image: </label>
-                <input type="file" placeholder="http://" name="file" accept="image/*" onChange={handleImageChange}></input>
+                <input type="file" placeholder="http://" name="file" accept="image/*" onChange={handleImageChange}/>
+                {(previewUrl || (editionMode && datosForm.urlImage)) && (
+                    <img src={previewUrl || datosForm.urlImage} alt="Preview"></img>
+                )}
             </div>
-            <button type="submit">Save</button>
+            {editionMode && (<button type="button" onClick={cancelEdit}>Cancel</button>)}
+            <button type="submit">{editionMode ? 'Upload Product' : 'Save'}</button>
         </form>
-
     );
 }
