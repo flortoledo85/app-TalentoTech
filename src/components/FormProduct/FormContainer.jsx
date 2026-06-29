@@ -43,34 +43,41 @@ export function FormContainer({ productToEdit, setProductToEdit }) {
 
     const handleSend = async (evento) => { 
         evento.preventDefault();
-        if (!imageFile) {
+        if (!imageFile && !productToEdit) {
             alert("You should choose a picture for the product.");
             return;
         }
         
-        let urlImage = '';
-
-        try {
-            const formData = new FormData();
-            formData.append('image', imageFile);
-            const apiKey = '9185cdcb00872d80ffeeab4601937375';
-            const answerImgbb = await fetch(`https://api.imgbb.com/1/upload?key=${apiKey}`,
-                {
-                    method: 'POST',
-                    body: formData,
-                });
-
-            const imgbbData = await answerImgbb.json();
-            
-            if (imgbbData.success) {
-                urlImage = imgbbData.data.url;
-            } else {
-                throw new Error("Failed upload to Imgbb.");
-            }
-        } catch (error)  {
-            console.error("Error uploading image: ", error);
-            alert("Error uploading the image, please try again...")  ;
+        if (dataForm.name.trim() === "" || dataForm.price <= 0) {
+            alert("Please complete all the fields with valid values...");
             return;
+        }
+
+        let urlImage = dataForm.urlImage || '';
+
+        if (imageFile) {
+            try {
+                const formData = new FormData();
+                formData.append('image', imageFile);
+                const apiKey = '9185cdcb00872d80ffeeab4601937375';
+                const answerImgbb = await fetch(`https://api.imgbb.com/1/upload?key=${apiKey}`,
+                    {
+                        method: 'POST',
+                        body: formData,
+                    });
+
+                const imgbbData = await answerImgbb.json();
+                
+                if (imgbbData.success) {
+                    urlImage = imgbbData.data.url;
+                } else {
+                    throw new Error("Failed upload to Imgbb.");
+                }
+            } catch (error)  {
+                console.error("Error uploading image: ", error);
+                alert("Error uploading the image, please try again...")  ;
+                return;
+            }
         }
             
         const fullProduct = { ...dataForm, urlImage: urlImage};

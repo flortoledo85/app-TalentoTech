@@ -32,9 +32,17 @@ export function FormProduct({datosForm, handleChange, handleSend, handleImageCha
             </div>
             <div className={styles.input}>
                 <label>Image: </label>
-                <input type="file" placeholder="http://" name="file" accept="image/*" onChange={handleImageChange}/>
-                {(previewUrl || (editionMode && datosForm.urlImage)) && (
-                    <img src={previewUrl || datosForm.urlImage} alt="Preview"></img>
+                {editionMode ? (
+                    <>
+                        <img src={datosForm.urlImage} alt="Current Image"/>
+                        <label>Change image? (optional)</label>
+                        <input type="file" placeholder="http://" name="file" accept="image/*" onChange={handleImageChange}/>
+                    </>
+                ) : (
+                    <input type="file" accept="image/*" onChange={handleImageChange}/>
+                )}
+                {previewUrl && (
+                    <img src={previewUrl} alt="Preview"/>
                 )}
             </div>
             {editionMode && (<button type="button" onClick={cancelEdit}>Cancel</button>)}

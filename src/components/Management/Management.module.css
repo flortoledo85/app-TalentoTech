@@ -1,0 +1,124 @@
+.container {
+  background-color: rgba(26, 26, 26, 0.95);
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  color: aliceblue;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #00d9ff;
+  margin-bottom: 1rem;
+}
+
+.container h3 {
+  font-size: 1.2rem;
+  color: #00d9ff;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #00d9ff;
+  margin: 1.5rem 0;
+  opacity: 0.4;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 217, 255, 0.05);
+  border: 1px solid #00d9ff;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  transition: 0.2s;
+}
+
+.listItem:hover {
+  background: rgba(0, 217, 255, 0.1);
+  box-shadow: 0 0 8px rgba(0, 217, 255, 0.2);
+}
+
+.productInfo {
+  font-size: 1rem;
+  color: aliceblue;
+}
+
+.productInfo span {
+  color: #00d9ff;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.btnEdit {
+  padding: 0.4rem 0.9rem;
+  background: transparent;
+  border: 2px solid #00d9ff;
+  color: #00d9ff;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btnEdit:hover {
+  background: #00d9ff;
+  color: #0f0f0f;
+  filter: drop-shadow(0 0 6px #00d9ff);
+}
+
+.btnDelete {
+  padding: 0.4rem 0.9rem;
+  background: transparent;
+  border: 2px solid #ff4d4d;
+  color: #ff4d4d;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btnDelete:hover {
+  background: #ff4d4d;
+  color: #0f0f0f;
+  filter: drop-shadow(0 0 6px #ff4d4d);
+}
+
+.empty {
+  text-align: center;
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.formSection {
+    flex-shrink: 0;
+}
+
+.listSection {
+    flex: 1;
+}

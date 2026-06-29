@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { db } from '../../firebase/config';
 import { FormContainer } from '../FormProduct/FormContainer';
-import { collection, getDocs, deleteDoc, doc, updateDoc, addDoc } from "firebase/firestore";
+import { collection, getDocs, deleteDoc, doc     } from "firebase/firestore";
+import styles from "./Management.module.css";
 
 
 const Managememt = () => {
@@ -37,21 +38,35 @@ const Managememt = () => {
     };
 
     return (
-        <div>
+        <div className={styles.container}>
             <h2>Products Management</h2>
-            <hr/>
-            <FormContainer datosForm={initForm}></FormContainer>
-            <hr/>
-            <h3>Porducts List</h3>
-            <ul>
-                {products.map((prod) => (
-                    <li key={prod.id}>
-                        {prod.name} - ${prod.price}
-                        <button onClick={() => handleEditClick(prod)}>Edit</button>
-                        <button onClick={() => handleDelete(prod.id)}>Delete</button>
-                    </li>
-                ))}
-            </ul>
+            <hr className={styles.divider}/>
+            <div className={styles.formSection}>
+                <FormContainer 
+                    productToEdit={productToEdit}
+                    setProductToEdit={setProductToEdit}
+                />
+            </div>
+            <hr className={styles.divider}/>
+            <div className={styles.listSection}>
+                <h3>Porducts List</h3>
+                <ul className={styles.list}>
+                    {products.length === 0 && (
+                        <p className={styles.empty}>No products found</p>
+                    )}
+                    {products.map((prod) => (
+                        <li key={prod.id} className={styles.listitem}>
+                            <span className={styles.productInfo}>
+                                {prod.name} - <span>${prod.price}</span>
+                            </span>
+                            <div className={styles.actions}>
+                                <button className={styles.btnEdit} onClick={() => handleEditClick(prod)}>Edit</button>
+                                <button className={styles.btnDelete} onClick={() => handleDelete(prod.id)}>Delete</button>
+                            </div>    
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 };
