@@ -9,6 +9,7 @@ import Cart from "./components/Cart/Cart";
 import DetailsNationalProducts from "./components/ProductosNacionalesDetalle/DetailsNationalProducts";
 import ProductosNacionales from "./components/ProductosNacionales/ProductosNacionales";
 import Managememt from "./components/Management/Management";
+import Login from "./components/Login/Login";
  
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/upload" element={<FormContainer />}>Upload</Route>
         <Route path="/measurements" element={<Measurements />}>Measurements</Route>
         <Route path="/management" element={<Managememt/>}/>
+        <Route path="/login" element={<Login/>}/>
       </Route>
     </Routes>
   );
