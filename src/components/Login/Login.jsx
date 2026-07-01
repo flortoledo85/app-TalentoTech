@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
+import { Link } from "react-router-dom";
 
 
 const Login = () => {
@@ -38,6 +39,7 @@ const Login = () => {
                     <input type="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
                 </div>
                 <button className={styles.btn} type="submit">Login in</button>
+                <p>You don't have an account yet? Register here...<Link to="/register">Register</Link></p>
             </form>
         </div>
     );

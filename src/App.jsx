@@ -10,7 +10,7 @@ import DetailsNationalProducts from "./components/ProductosNacionalesDetalle/Det
 import ProductosNacionales from "./components/ProductosNacionales/ProductosNacionales";
 import Managememt from "./components/Management/Management";
 import Login from "./components/Login/Login";
- 
+import Register from "./components/Register/Register"; 
 
 function App() {
   return(
@@ -25,6 +25,7 @@ function App() {
         <Route path="/measurements" element={<Measurements />}>Measurements</Route>
         <Route path="/management" element={<Managememt/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register />}></Route>
       </Route>
     </Routes>
   );
