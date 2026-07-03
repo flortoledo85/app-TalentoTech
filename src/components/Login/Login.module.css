@@ -72,3 +72,19 @@
   color: #0f0f0f;
   filter: drop-shadow(0 0 6px #FFD700);
 }
+
+.register {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.register a {
+    color: #00d9ff;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+.register a:hover {
+    color: #FFD700;
+}

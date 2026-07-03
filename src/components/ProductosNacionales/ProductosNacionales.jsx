@@ -4,9 +4,14 @@ import { db } from '../../firebase/config';
 import { Link } from "react-router-dom";
 import { ItemList } from '../ItemList/ItemList';
 import styles from "./ProductosNacionales.module.css"
+import { Container, Row, Col } from "react-bootstrap";
 
-const ProductosNacionales = () => {
+const ProductosNacionales = ({Message}) => {
     const [products, setProducts] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const filteredProducts = products.filter(prod => prod.name.toLowerCase().includes(searchTerm.toLowerCase()));
+
     useEffect(() => {
         const productDB = collection(db, "productos-nacionales")
 
@@ -22,22 +27,20 @@ const ProductosNacionales = () => {
 
     return (
         <div>
+            <Container>
+                <Row className="mb-4">
+                    <Col>
+                        <input 
+                            type="text" 
+                            className="form-control" 
+                            placeholder="Search for products" 
+                            onChange={(e) => setSearchTerm(e.target.value)}>
+                        </input>
+                    </Col>
+                </Row>
+            </Container>
             <h1>National Products</h1>
-            <ItemList productos={products}>
-            {/* <div className={styles.list}>
-                {products.map(prod => (
-                    <div key={prod.id} className={styles.card}>
-                        <Link to={`/producto/${prod.id}`}>
-                            <img src={prod.urlImage} alt={prod.name} className={styles.img}/>
-                            <h3 className={styles.name}>{prod.name}</h3>
-                        </Link>
-                        <p>Description: {prod.details}</p>
-                        <p className={styles.price}>Price: ${prod.price}</p>
-                        <p>Stock: {prod.stock}</p>
-                        <hr />
-                    </div> */}
-                {/* ))} */}
-            </ItemList>
+            <ItemList productos={filteredProducts}/>
         </div>
     );
 };

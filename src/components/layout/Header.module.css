@@ -16,6 +16,40 @@
     display: flex;
     align-items: center;
 }
+.header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.header nav ul button {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: 0.2s;
+}
+
+.header nav ul button:hover {
+    background: white;
+    color: #103d79;
+}
+
+.header nav ul span {
+    font-size: 0.85rem;
+    color: #ccc;
+}
 
 .header h1 {
     margin: 0;

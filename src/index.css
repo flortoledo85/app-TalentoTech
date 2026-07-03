@@ -14,21 +14,25 @@ body {
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(90deg, #2a2a2a, #1f1f1f, #0f0f0f);
-  color: white;
+  color: white !important;
   font-size: 16px;
   min-height: 100vh;
 }
 
 a {
-  color: white;
-  text-decoration: none;
+  color: white !important; 
+  text-decoration: none !important;
 }
 
+p {
+  font-family: inherit !important;
+  color: inherit !important;
+}
 
 h1 {
     font-family: 'Manrope', sans-serif;
     font-size: 3rem;
-    color: white;
+    color: white !important;
     padding: 0.5rem 1rem;
 }
 
@@ -40,7 +44,7 @@ h2 {
     margin-top: 2vh;
     margin-left: 15vw;
     margin-right: 15vw;
-    color: #00d9ff;
+    color: #00d9ff !important;
 }
 
 

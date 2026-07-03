@@ -41,31 +41,36 @@ const Managememt = () => {
         <div className={styles.container}>
             <h2>Products Management</h2>
             <hr className={styles.divider}/>
-            <div className={styles.formSection}>
-                <FormContainer 
-                    productToEdit={productToEdit}
-                    setProductToEdit={setProductToEdit}
-                />
-            </div>
-            <hr className={styles.divider}/>
-            <div className={styles.listSection}>
-                <h3>Porducts List</h3>
-                <ul className={styles.list}>
-                    {products.length === 0 && (
-                        <p className={styles.empty}>No products found</p>
-                    )}
-                    {products.map((prod) => (
-                        <li key={prod.id} className={styles.listitem}>
-                            <span className={styles.productInfo}>
-                                {prod.name} - <span>${prod.price}</span>
-                            </span>
-                            <div className={styles.actions}>
-                                <button className={styles.btnEdit} onClick={() => handleEditClick(prod)}>Edit</button>
-                                <button className={styles.btnDelete} onClick={() => handleDelete(prod.id)}>Delete</button>
-                            </div>    
-                        </li>
-                    ))}
-                </ul>
+            <div className={styles.content}>
+                <div className={styles.formSection}>
+                    <FormContainer 
+                        productToEdit={productToEdit}
+                        setProductToEdit={setProductToEdit}
+                    />
+                </div>
+                <hr className={styles.divider}/>
+                <div className={styles.listSection}>
+                    <h3>Porducts List</h3>
+                    <ul className={styles.list}>
+                        {products.length === 0 && (
+                            <p className={styles.empty}>No products found</p>
+                        )}
+                        {products.map((prod) => (
+                            <li key={prod.id} className={styles.listItem}>
+                                <img src={prod.urlImage} alt={prod.name} className={styles.cardImage}></img>
+                                <div className={styles.productInfo}>
+                                    <span className={styles.productInfo}>
+                                        {prod.name} - <span>${prod.price}</span>
+                                    </span>
+                                </div>
+                                <div className={styles.actions}>
+                                    <button className={styles.btnEdit} onClick={() => handleEditClick(prod)}>Edit</button>
+                                    <button className={styles.btnDelete} onClick={() => handleDelete(prod.id)}>Delete</button>
+                                </div>    
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </div>
     );

@@ -16,7 +16,7 @@ function Header(){
                 {user ? (
                     <>
                         {user.rol === 'admin' && (
-                            <li><Link to="/alta" style={{ color: 'black' }}>Management</Link></li>)}
+                            <li><Link to="/management">Management</Link></li>)}
                             <span>Hi, {user.email}</span>
                             <button onClick={logout}>Close session</button>
                     </>

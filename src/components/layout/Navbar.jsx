@@ -14,7 +14,7 @@ export function Navbar() {
             <Link to="/">Home</Link>
             <Link to="/products">Products</Link>
             <Link to="/nationalproducts">National Products</Link>
-            <Link to="/upload">Upload Product</Link>
+            {/* <Link to="/upload">Upload Product</Link> */}
             <Link to="/measurements">Measurements</Link>
             <Link to="/cart"><ShoppingCart/> {totalItems > 0 && <span>{totalItems}</span>} </Link>
         </nav>
