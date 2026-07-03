@@ -130,3 +130,25 @@
   color: #0f0f0f;
   filter: drop-shadow(0 0 6px #ff4d4d);
 }
+
+.content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.formSection {
+  flex-shrink: 0;
+}
+
+.listSection {
+  flex: 1;
+  min-width: 0; /* ✅ evita que desborde */
+}
+
+.empty {
+  text-align: center;
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}

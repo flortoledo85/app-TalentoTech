@@ -48,7 +48,6 @@ const Managememt = () => {
                         setProductToEdit={setProductToEdit}
                     />
                 </div>
-                <hr className={styles.divider}/>
                 <div className={styles.listSection}>
                     <h3>Porducts List</h3>
                     <ul className={styles.list}>
