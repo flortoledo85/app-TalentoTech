@@ -6,17 +6,24 @@
 .slide {
     width: 100%;
     height: 80vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     position: relative;
-    transition: background-image 0.5s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.slideImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .overlay {
+    position: relative; /* ✅ para que quede encima de la imagen */
+    z-index: 1;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
@@ -26,7 +33,6 @@
     justify-content: center;
     gap: 1rem;
 }
-
 .title {
     font-family: 'Manrope', sans-serif;
     font-size: 3.5rem;

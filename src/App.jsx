@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route } from 'react-router-dom';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { Home } from './components/Home/Home';
 import { Layout } from './components/Layout/Layout';
 import { FormContainer } from './components/FormProduct/FormContainer';
 import ProductDetail from "./components/ProductDetails/ProductDetails";
@@ -20,7 +21,7 @@ function App() {
     <SearchProvider>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<h2>Comodidad y estilo para tu mejor visión</h2>}></Route>
+          <Route path="/" element={<Home/>}></Route>
           <Route path="/products" element={<ItemListContainer Mensaje={"Products"} />}></Route>
           <Route path="/products/:id" element={<ProductDetail />}></Route>
           {/* <Route path="/nationalproducts" element={<ProductosNacionales />}></Route> */}
