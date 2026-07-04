@@ -12,7 +12,7 @@ const DetailsNationalProducts = () => {
     const { id } = useParams();
     useEffect(() => {
         if (id) {
-            const docRef = doc(db, "productos-nacionales", id);
+            const docRef = doc(db, "products", id);
             
             getDoc(docRef)
                 .then((resp) => {
@@ -20,7 +20,7 @@ const DetailsNationalProducts = () => {
                     { setItem({ ...resp.data(), id: resp.id });
                 } else 
                     {
-                        console.log("No se encontró el producto");
+                        console.log("Product not founded");
                 }   
             })
             .catch(error => console.log(error));

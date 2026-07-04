@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { ItemList } from "../ItemList/ItemList";
-import styles from "./ItemListContainer.module.css"
+import { collection, getDocs } from "firebase/firestore";
+import { db } from '../../firebase/config';
+import styles from "./ItemListContainer.module.css";
 
 export function ItemListContainer({ Mensaje }) {
     const [productos, setProducto] = useState([]);
@@ -8,30 +10,36 @@ export function ItemListContainer({ Mensaje }) {
     const [cargado, setCargado] = useState(true);
 
     useEffect(() => {
-        fetch('/data/productos.json')
-        .then(res => {
-            if (!res.ok) {
-                throw new Error('No se pudo cargar la información de los productos')
-            }
-            return res.json();
-        })
-        .then(data => {
-            setProducto(data);
-        })
-        .catch(error => {
-            setError(error.message);
-        })
-        .finally(() => {
-            setCargado(false);
-        })
+        const productsDB = collection(db, "products");
+        getDocs(productsDB)
+            .then((resp) => {
+                setProducto(
+                    resp.docs.map((doc) => ({
+                        ...doc.data(),
+                        id: doc.id,
+                        image: doc.data().urlImage || doc.data().image
+                    }))
+                );
+            })
+            // fetch('/data/productos.json')
+            // .then(res => {
+            //     if (!res.ok) {
+            //         throw new Error('No se pudo cargar la información de los productos')
+            //     }
+            //     return res.json();
+            // })
+            // .then(data => {
+            //     setProducto(data);
+            // })
+            .catch(error => {
+                setError(error.message);
+            })
+            .finally(() => {
+                setCargado(false);
+            })
     }, []);
-    // const productos = [
-    //     {id: '1234', nombre: 'Pink Love', precio: 120000, stock: 15, imagen: '/pictures/pink_love.jpg'},
-    //     {id: '1244', nombre: 'Ray Ban', precio: 450000, stock: 10, imagen: '/pictures/rayban_p.jpg'},
-    //     {id: '1254', nombre: 'Armonic', precio: 190000, stock: 18, imagen: '/pictures/cristal.jpg'},
-    // ];
     if (cargado) {
-        return <p className={styles.subtitulo}>Cargando productos, por favor espere...</p>;
+        return <p className={styles.subtitulo}>Loading products, please wait...</p>;
     }
     if (error) {
         return <p className={styles.subitulo}>Error: {error}</p>;
@@ -40,7 +48,7 @@ export function ItemListContainer({ Mensaje }) {
         <div>
             <h2 className={styles.subtitulo}> {Mensaje} </h2>
             <div className={styles.container}>
-                <ItemList productos = {productos}/>
+                <ItemList productos={productos} />
             </div>
         </div>
     );

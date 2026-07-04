@@ -83,11 +83,11 @@ export function FormContainer({ productToEdit, setProductToEdit }) {
         const fullProduct = { ...dataForm, urlImage: urlImage};
         try {
             if (productToEdit) {
-                const docRef = doc (db, "productos-nacionales", productToEdit.id);
+                const docRef = doc (db, "products", productToEdit.id);
                 await updateDoc(docRef, fullProduct);
                 alert("Product has been updated...");
             } else {
-                const productsCollection = collection(db, "productos-nacionales");
+                const productsCollection = collection(db, "products");
                 await addDoc(productsCollection, fullProduct);
             }
             setDataForm(initForm);

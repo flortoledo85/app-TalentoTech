@@ -13,7 +13,7 @@ const ProductosNacionales = ({Message}) => {
     const filteredProducts = products.filter(prod => prod.name.toLowerCase().includes(searchTerm.toLowerCase()));
 
     useEffect(() => {
-        const productDB = collection(db, "productos-nacionales")
+        const productDB = collection(db, "products")
 
         getDocs(productDB).then((resp) => {
             setProducts(

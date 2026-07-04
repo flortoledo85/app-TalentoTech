@@ -10,7 +10,7 @@ const Managememt = () => {
 
     useEffect(() => {
         const fetchProducts = async () => {
-            const productsRef = collection( db, "productos-nacionales");
+            const productsRef = collection( db, "products");
             const resp = await getDocs(productsRef);
 
             setProducts(
@@ -30,7 +30,7 @@ const Managememt = () => {
     const handleDelete = async (id) => {
         const confirm = window.confirm("Are you sure you want to delete this item?");
         if (confirm) {
-            const docRef = doc(db, "productos-nacionales", id);
+            const docRef = doc(db, "products", id);
             await deleteDoc(docRef);
             setProducts(products.filter(prod => prod.id !== id));
             alert("Product has been deleted");
