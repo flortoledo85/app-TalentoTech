@@ -1,0 +1,109 @@
+.hero {
+    width: 100%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: background-image 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 3.5rem;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(0, 217, 255, 0.8);
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    text-align: center;
+}
+
+.btn {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    border: 2px solid #00d9ff;
+    color: #00d9ff;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #00d9ff;
+    color: #0f0f0f;
+    filter: drop-shadow(0 0 10px #00d9ff);
+}
+
+.arrowLeft, .arrowRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 2px solid #00d9ff;
+    color: #00d9ff;
+    font-size: 2.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrowLeft { left: 1rem; }
+.arrowRight { right: 1rem; }
+
+.arrowLeft:hover, .arrowRight:hover {
+    background: #00d9ff;
+    color: #0f0f0f;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(26, 26, 26, 0.95);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #555;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.activeDot {
+    background: #00d9ff;
+    box-shadow: 0 0 6px #00d9ff;
+}
