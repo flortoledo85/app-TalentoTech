@@ -8,10 +8,10 @@ export function Layout(){
     return(
             <div>
                 <Header />
-                <Navbar />
-                    <main>
-                        <Outlet></Outlet>
-                    </main>
+                {/* <Navbar /> */}
+                <main>
+                    <Outlet></Outlet>
+                </main>
                 <Footer />
             </div>
     );

@@ -1,76 +1,117 @@
-.header{
-    background-color:#103d79;
-    color:white;
-    padding:20px;
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.header nav {
-    margin-left: auto;
-}
-
-.header nav a {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-.header nav ul {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.header nav ul li {
-    display: flex;
-    align-items: center;
-}
-
-.header nav ul button {
-    background: transparent;
-    border: 1px solid white;
+.header {
+    background-color: rgba(15, 15, 15, 0.98);
     color: white;
+    border-bottom: 1px solid #00d9ff;
+    font-family: "Inter", sans-serif;
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
+    border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.logo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.8rem;
+    color: #00d9ff;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.userActions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem !important;
+}
+
+.userActions a {
+    color: aliceblue;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.userActions a:hover {
+    color: #00d9ff;
+}
+
+.userActions span {
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.userActions button {
+    background: transparent;
+    border: 1px solid #00d9ff;
+    color: #00d9ff;
     padding: 0.3rem 0.8rem;
     border-radius: 6px;
     cursor: pointer;
     font-size: 0.85rem;
     transition: 0.2s;
+    margin: 0 !important;
 }
 
-.header nav ul button:hover {
-    background: white;
-    color: #103d79;
+.userActions button:hover {
+    background: #00d9ff;
+    color: #0f0f0f;
 }
 
-.header nav ul span {
+.managementBtn {
+    border: 1px solid #00d9ff;
+    color: #00d9ff !important;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
     font-size: 0.85rem;
-    color: #ccc;
+    transition: 0.2s;
 }
 
-.header h1 {
-    margin: 0;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    white-space: nowrap;
+.managementBtn:hover {
+    background: #00d9ff;
+    color: #0f0f0f !important;
 }
 
-.header nav a span {
-    background-color: #103d79;
-    color: #FFD700;
+.cartLink {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cartBadge {
+    background-color: #00d9ff !important;
+    color: #0f0f0f !important;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    font-size: medium;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     top: -8px;
-    right: -12px;
+    right: -10px;
     font-weight: 900;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.7rem 2rem;
+}
+
+.nav a {
+    color: aliceblue;
+    font-size: 1rem;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.nav a:hover {
+    color: #00d9ff;
 }
