@@ -3,11 +3,17 @@ import { ItemList } from "../ItemList/ItemList";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../../firebase/config';
 import styles from "./ItemListContainer.module.css";
+import { useSearch } from "../../context/SearchContext";
 
 export function ItemListContainer({ Mensaje }) {
     const [productos, setProducto] = useState([]);
     const [error, setError] = useState(null);
     const [cargado, setCargado] = useState(true);
+    const { search } = useSearch();
+
+    const filteredProducts = productos.filter(prod => 
+        prod.name.toLowerCase().includes(search.toLowerCase())
+    );
 
     useEffect(() => {
         const productsDB = collection(db, "products");
@@ -48,7 +54,7 @@ export function ItemListContainer({ Mensaje }) {
         <div>
             <h2 className={styles.subtitulo}> {Mensaje} </h2>
             <div className={styles.container}>
-                <ItemList productos={productos} />
+                <ItemList productos={filteredProducts} />
             </div>
         </div>
     );
