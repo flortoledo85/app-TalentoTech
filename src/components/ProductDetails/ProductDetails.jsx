@@ -4,6 +4,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from '../../firebase/config';
 import styles from "./ProductDetails.module.css";
 import { useCart } from "../../context/CartContext";
+import { LoadingSpinner } from "../Spinner/Spinner";
 
 
 const ProductDetail = () => {
@@ -53,7 +54,8 @@ const ProductDetail = () => {
     }, [id]);
 
     if (product === null) {
-        return <h2 className={styles.name}>Loading product details...</h2>;
+        return <LoadingSpinner/>
+        // <h2 className={styles.name}>Loading product details...</h2>;
     }
 
     if (product === undefined) {

@@ -3,25 +3,34 @@ import { db } from '../../firebase/config';
 import { FormContainer } from '../FormProduct/FormContainer';
 import { collection, getDocs, deleteDoc, doc     } from "firebase/firestore";
 import styles from "./Management.module.css";
-
+import { LoadingSpinner } from "../Spinner/Spinner";
 
 const Managememt = () => {
     const [products, setProducts] = useState([]);
+    const [productToEdit, setProductToEdit] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchProducts = async () => {
+            try {
             const productsRef = collection( db, "products");
             const resp = await getDocs(productsRef);
 
             setProducts(
-                resp.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-            );
+                resp.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+            } catch (error) {
+                console.log(error);
+            } finally {
+                setLoading(false);
+            }
         };
 
         fetchProducts();
     }, []);
 
-    const [productToEdit, setProductToEdit] = useState(null);
+    if (loading) return <LoadingSpinner/>;
+
+
 
     const handleEditClick = (product) => {
         setProductToEdit(product);

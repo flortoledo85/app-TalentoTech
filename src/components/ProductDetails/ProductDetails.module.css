@@ -87,6 +87,8 @@
   min-width: 24px;
   text-align: center;
   font-size: 1rem;
+  margin: 0;
+  line-height: 28px;
 }
 
 .addToCart {
@@ -105,4 +107,23 @@
   background: #00d9ff;
   color: #0f0f0f;
   filter: drop-shadow(0 0 6px #FFD700);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    height: 250px;
+  }
+
+  .info {
+    max-width: 100%;
+    width: 100%;
+  }
 }

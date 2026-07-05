@@ -4,6 +4,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from '../../firebase/config';
 import styles from "./ItemListContainer.module.css";
 import { useSearch } from "../../context/SearchContext";
+import { LoadingSpinner } from "../Spinner/Spinner";
 
 export function ItemListContainer({ Mensaje }) {
     const [productos, setProducto] = useState([]);
@@ -45,7 +46,8 @@ export function ItemListContainer({ Mensaje }) {
             })
     }, []);
     if (cargado) {
-        return <p className={styles.subtitulo}>Loading products, please wait...</p>;
+        return <LoadingSpinner />
+        // return <p className={styles.subtitulo}>Loading products, please wait...</p>;
     }
     if (error) {
         return <p className={styles.subitulo}>Error: {error}</p>;

@@ -28,7 +28,7 @@ function Header() {
                     <Link to={user ? "/" : "/login"} className={styles.userIcon}>
                         {user ? <User /> : <LogIn/>}
                     </Link>
-                    <Link to="/cart"><ShoppingCart /> {totalItems > 0 && <span>{totalItems}</span>} </Link>
+                    <Link to="/cart" aria-label="Shopping cart"><ShoppingCart /> {totalItems > 0 && <span>{totalItems}</span>} </Link>
                     <button className={`${styles.hamburger} ${menuOpen ? styles.hamburgerOpen : ''}`}
                         onClick={() => setMenuOpen(!menuOpen)}>
                         <span></span>
@@ -41,13 +41,12 @@ function Header() {
                 <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
                 <Link to="/products" onClick={() => setMenuOpen(false)}>Products</Link>
                 <Link to="/measurements" onClick={() => setMenuOpen(false)}>Measurements</Link>
+                <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
                 {user && (
                     <>
                         {user.rol === 'admin' && (
                             <Link to="/management" onClick={() => setMenuOpen(false)}>Management</Link>
                         )}
-                        <span>Hi, {user.email}</span>
-                        <button className={styles.closeBtn} onClick={logout}>Close session</button>
                     </>
                 )}
                 <input
@@ -56,7 +55,12 @@ function Header() {
                     placeholder="Search products..."
                     onChange={handleSearch}>
                 </input>
-                <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+                {user && (
+                    <>
+                        <span>Hi, {user.email}</span> 
+                        <button className={styles.closeBtn} onClick={logout}>Close session</button>
+                    </>
+                )}
             </nav>
         </header>
     );
