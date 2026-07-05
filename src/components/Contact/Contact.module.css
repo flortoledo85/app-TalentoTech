@@ -1,0 +1,72 @@
+.container {
+    background-color: rgba(26, 26, 26, 0.95);
+    min-height: 100vh;
+    padding: 3rem 2rem;
+    font-family: "Inter", sans-serif;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    color: #00d9ff;
+    margin: 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.socials {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.socialLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    color: #00d9ff;
+    font-size: 0.85rem;
+    transition: 0.2s;
+}
+
+.socialLink:hover {
+    color: #FFD700;
+    filter: drop-shadow(0 0 6px #FFD700);
+    transform: translateY(-4px);
+}
+
+.teamTitle {
+    font-size: 1.3rem;
+    color: #00d9ff;
+    margin: 0;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .socials {
+        gap: 1rem;
+    }
+}

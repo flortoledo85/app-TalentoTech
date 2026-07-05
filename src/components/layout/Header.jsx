@@ -56,6 +56,7 @@ function Header() {
                     placeholder="Search products..."
                     onChange={handleSearch}>
                 </input>
+                <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
             </nav>
         </header>
     );

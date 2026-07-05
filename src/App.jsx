@@ -14,6 +14,7 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import { SearchProvider } from "./context/SearchContext";
+import { Contact } from "./components/Contact/Contact";
 
 function App() {
   return(
@@ -28,6 +29,7 @@ function App() {
           <Route path="/cart" element={<Cart />}></Route>
           {/* <Route path="/upload" element={<FormContainer />}>Upload</Route> */}
           <Route path="/measurements" element={<Measurements />}>Measurements</Route>
+          <Route path="/contact" element={<Contact />}>Contact</Route>
           <Route path="/management" element={
               <ProtectedRoute rolesAllowed={['admin']}>
                 <Managememt/>
