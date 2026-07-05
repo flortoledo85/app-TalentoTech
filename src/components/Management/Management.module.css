@@ -143,7 +143,7 @@
 
 .listSection {
   flex: 1;
-  min-width: 0; /* ✅ evita que desborde */
+  min-width: 0;
 }
 
 .empty {
@@ -152,3 +152,42 @@
   font-size: 0.95rem;
   margin-top: 1rem;
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .content {
+      flex-direction: column;
+    }
+
+    .formSection {
+      width: 100%;
+    }
+
+    .list {
+      justify-content: center;
+    }
+
+    .listItem {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+
+@media (max-width: 480px) {
+    .container h2 {
+        font-size: 1.3rem;
+    }
+
+    .listItem {
+        width: 100%;
+    }
+
+    .btnEdit, .btnDelete {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+  }
+  

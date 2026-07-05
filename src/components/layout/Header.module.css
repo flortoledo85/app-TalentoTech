@@ -42,7 +42,7 @@
     color: #ccc;
 }
 
-.userActions button {
+.closeBtn {
     background: transparent;
     border: 1px solid #00d9ff;
     color: #00d9ff;
@@ -51,10 +51,9 @@
     cursor: pointer;
     font-size: 0.85rem;
     transition: 0.2s;
-    margin: 0 !important;
 }
 
-.userActions button:hover {
+.closeBtn:hover {
     background: #00d9ff;
     color: #0f0f0f;
 }
@@ -139,28 +138,61 @@
 
 .hamburger {
     display: none;
-    background: transparent;
-    border: none;
-    color: #00d9ff;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: transparent !important;
+    border: none !important;
     cursor: pointer;
-    padding: 0;
+    padding: 4px;
+    width: 33px;
+    height: 33px;
 }
 
+.hamburger span {
+    display: block !important;
+    width: 25px !important;
+    height: 2px !important;
+    background-color: #00d9ff !important;
+    border-radius: 2px !important;
+    transition: transform 0.3s, opacity 0.3s !important;
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+.hamburgerOpen span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg) !important;
+}
+
+.hamburgerOpen span:nth-child(2) {
+    opacity: 0 !important;
+}
+
+.hamburgerOpen span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg) !important;
+}
 
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+        flex-direction: column;
+        gap: 5px;
     }
 
     .nav {
-        display: none;
+        display: none !important;
         flex-direction: column;
         gap: 1rem;
         padding: 1rem 2rem;
     }
 
     .navOpen {
-        display: flex;
+        display: flex !important;
+    }
+
+    .topBar {
+        flex-wrap: wrap;
+        gap: 0.5rem;
     }
 
     .searchInput {

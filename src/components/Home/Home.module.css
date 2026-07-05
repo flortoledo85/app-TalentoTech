@@ -70,7 +70,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: transparent;
+    background: rgba(0, 0, 0, 0.5);
     border: 2px solid #00d9ff;
     color: #00d9ff;
     font-size: 2.5rem;
@@ -82,6 +82,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2;
 }
 
 .arrowLeft { left: 1rem; }
