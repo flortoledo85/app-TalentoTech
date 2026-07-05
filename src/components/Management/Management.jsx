@@ -4,12 +4,23 @@ import { FormContainer } from '../FormProduct/FormContainer';
 import { collection, getDocs, deleteDoc, doc     } from "firebase/firestore";
 import styles from "./Management.module.css";
 import { LoadingSpinner } from "../Spinner/Spinner";
+import Pagination from "../Pagination/Pagination";
 
 const Managememt = () => {
     const [products, setProducts] = useState([]);
     const [productToEdit, setProductToEdit] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [currentPages, setCurrentPage] = useState(1);
+    const productsForPage = 6;
 
+    const  productsPagination = products.slice(
+        (currentPages -1)*productsForPage,
+        currentPages*productsForPage
+    );
+
+    const totalPages = Math.ceil(products.length / productsForPage);
+    const loadingPage = (page) => setCurrentPage(page);
+    
     useEffect(() => {
         const fetchProducts = async () => {
             try {
@@ -63,7 +74,7 @@ const Managememt = () => {
                         {products.length === 0 && (
                             <p className={styles.empty}>No products found</p>
                         )}
-                        {products.map((prod) => (
+                        {productsPagination.map((prod) => (
                             <li key={prod.id} className={styles.listItem}>
                                 <img src={prod.urlImage} alt={prod.name} className={styles.cardImage}></img>
                                 <div className={styles.productInfo}>
@@ -79,6 +90,12 @@ const Managememt = () => {
                         ))}
                     </ul>
                 </div>
+                <Pagination
+                    currentPages={currentPages}
+                    totalOfPages={totalPages}
+                    loadingPage={loadingPage}
+                    loading={loading}
+                />
             </div>
         </div>
     );

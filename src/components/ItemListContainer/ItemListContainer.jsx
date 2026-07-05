@@ -5,16 +5,29 @@ import { db } from '../../firebase/config';
 import styles from "./ItemListContainer.module.css";
 import { useSearch } from "../../context/SearchContext";
 import { LoadingSpinner } from "../Spinner/Spinner";
+import Pagination from "../Pagination/Pagination";
+
 
 export function ItemListContainer({ Mensaje }) {
     const [productos, setProducto] = useState([]);
     const [error, setError] = useState(null);
-    const [cargado, setCargado] = useState(true);
+    const [loading, setLoading] = useState(true);
     const { search } = useSearch();
+    const [currentPages, setCurrentPage] = useState(1);
+    const productsForPage = 5
 
     const filteredProducts = productos.filter(prod => 
         prod.name.toLowerCase().includes(search.toLowerCase())
     );
+
+    const productsPagination = filteredProducts.slice(
+        (currentPages - 1) * productsForPage,
+        currentPages * productsForPage
+    );
+
+    const totalPages = Math.ceil(filteredProducts.length / productsForPage);
+
+    const loadingPage = (page) => setCurrentPage(page);
 
     useEffect(() => {
         const productsDB = collection(db, "products");
@@ -42,10 +55,10 @@ export function ItemListContainer({ Mensaje }) {
                 setError(error.message);
             })
             .finally(() => {
-                setCargado(false);
+                setLoading(false);
             })
     }, []);
-    if (cargado) {
+    if (loading) {
         return <LoadingSpinner />
         // return <p className={styles.subtitulo}>Loading products, please wait...</p>;
     }
@@ -56,7 +69,13 @@ export function ItemListContainer({ Mensaje }) {
         <div>
             <h2 className={styles.subtitulo}> {Mensaje} </h2>
             <div className={styles.container}>
-                <ItemList productos={filteredProducts} />
+                <ItemList productos={productsPagination} />
+                <Pagination
+                    currentPages={currentPages}
+                    totalOfPages={totalPages}
+                    loadingPage={loadingPage}
+                    loading={loading}
+                />
             </div>
         </div>
     );

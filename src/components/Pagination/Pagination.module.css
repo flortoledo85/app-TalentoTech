@@ -1,0 +1,60 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 0;
+}
+
+.btnNav {
+    background: transparent;
+    border: 2px solid #00d9ff;
+    color: #00d9ff;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnNav:hover:not(:disabled) {
+    background: #00d9ff;
+    color: #0f0f0f;
+}
+
+.btnNav:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.numbers {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.btnNum {
+    background: transparent;
+    border: 2px solid #00d9ff;
+    color: #00d9ff;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btnNum:hover:not(:disabled) {
+    background: #00d9ff;
+    color: #0f0f0f;
+}
+
+.active {
+    background: #00d9ff;
+    color: #0f0f0f;
+    font-weight: bold;
+}
