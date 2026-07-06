@@ -4,7 +4,6 @@ import styles from "./FormProduct.module.css"
 export function FormProduct({datosForm, handleChange, handleSend, handleImageChange, previewUrl, cancelEdit, productEdit, editionMode}) {
     return(
         <form className={styles.formulario} onSubmit={handleSend} aria-label={editionMode ? 'Edit product form' : 'Add new product form'}>
-            <h3>{editionMode ? 'Edit Product' : 'Add New Product'}</h3>
             <div className={styles.input}>
                 <label htmlFor="name">Name: </label>
                 <input type="text" placeholder="Ej: rayban 1950" name="name" value={datosForm.name} onChange={handleChange}></input>

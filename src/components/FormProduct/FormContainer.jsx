@@ -102,6 +102,7 @@ export function FormContainer({ productToEdit, setProductToEdit }) {
     };
     return (
         <div className={styles.containerForm}>
+            <h3 className={styles.h3}>{productToEdit ? 'Edit Product' : 'Add New Product'}</h3>
             <FormProduct
             datosForm={dataForm}
             handleChange={handleChange}

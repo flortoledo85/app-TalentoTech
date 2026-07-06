@@ -13,7 +13,7 @@ const ProductDetail = () => {
 
     const { id } = useParams();
     const [product, setProduct] = useState(null);
-    const updatedQuantity = getUpdatedQuantity(parseInt(id));
+    const updatedQuantity = getUpdatedQuantity(id);
     const [counter, setCounter] = useState(updatedQuantity);
 
     const increment = () => {
@@ -35,6 +35,10 @@ const ProductDetail = () => {
     };
 
     useEffect(() => {
+        setCounter(getUpdatedQuantity(id));
+    }, [id]);
+
+    useEffect(() => {
         const docRef = doc(db, "products", id);
         getDoc(docRef)
             .then((resp) => {
@@ -54,8 +58,7 @@ const ProductDetail = () => {
     }, [id]);
 
     if (product === null) {
-        return <LoadingSpinner/>
-        // <h2 className={styles.name}>Loading product details...</h2>;
+        return <LoadingSpinner/>        // <h2 className={styles.name}>Loading product details...</h2>;
     }
 
     if (product === undefined) {
