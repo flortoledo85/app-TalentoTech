@@ -33,9 +33,9 @@ const Cart = () => {
                         <p>Unit Price: ${item.price}</p>
                     </div>
                     <p className={styles.subtotal}>Subtotal: ${item.price * item.quantity}</p>
-                    <Link to="/cart" onClick={()=>removeItem(item.id)} className={styles.removeBtn}>
+                    <button onClick={()=>removeItem(item.id)} className={styles.removeBtn} aria-label={`Remove ${item.name} from cart`}>
                         <Trash2 size={24} />
-                    </Link>
+                    </button>
                 </div>
             ))}
             <hr className={styles.divider} />

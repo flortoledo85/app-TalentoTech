@@ -71,7 +71,11 @@
     margin-left: 1rem;
     color: #ff4d4d;
     flex-shrink: 0;
-    transition: 02s;
+    transition: 0.2s;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer;
 }
 
 .removeBtn:hover {

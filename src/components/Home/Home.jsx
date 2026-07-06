@@ -26,7 +26,7 @@ export function Home() {
     const next = () => setCurrent(prev => (prev + 1) % images.length);
 
     return (
-        <div className={styles.hero}>
+        <div className={styles.hero} role="region" aria-label="Image carousel">
             <div className={styles.slide}>
                 <img src={images[current].url} alt={images[current].title} className={styles.slideImg}/>
                 <div className={styles.overlay}>
@@ -34,10 +34,10 @@ export function Home() {
                     <p className={styles.subtitle}>{images[current].subtitle}</p>
                     <Link to='/products' className={styles.btn}>See products</Link>
                 </div>
-                <button className={styles.arrowLeft} onClick={prev}>‹</button>
-                <button className={styles.arrowRight} onClick={next}>›</button>
+                <button className={styles.arrowLeft} onClick={prev} aria-label="Previous image">‹</button>
+                <button className={styles.arrowRight} onClick={next} aria-label="Next image">›</button>
             </div>
-            <div className={styles.dots}>
+            <div className={styles.dots} role="tablist" aria-label="Carousel navigation">
                 {images.map((_, i) => (
                     <span key={i} className={`${styles.dot} ${i === current ? styles.activeDot : ''}`} onClick={() => goTo(i)}></span>
                 ))}

@@ -18,7 +18,12 @@ function Header() {
     const handleSearch = (e) => {
         setSearch(e.target.value);
         navigate('/products');
-    }
+    };
+
+    const handleLogOut = () => {
+        logout();
+        navigate('/');
+    };
 
     return (
         <header className={styles.header}>
@@ -58,7 +63,7 @@ function Header() {
                 {user && (
                     <>
                         <span>Hi, {user.email}</span> 
-                        <button className={styles.closeBtn} onClick={logout}>Close session</button>
+                        <button className={styles.closeBtn} onClick={handleLogOut}>Close session</button>
                     </>
                 )}
             </nav>

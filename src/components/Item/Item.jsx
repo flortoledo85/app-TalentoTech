@@ -42,7 +42,7 @@ export function Item({ id, image, name, price, stock }) {
         <div className={styles.producto}>
             <Link to={`/products/${id}`}>
                 <img src={image} alt={name} className={styles.img}></img>
-                 <h3 className={styles.name}>{name}</h3>
+                <h3 className={styles.name}>{name}</h3>
                 <p className={styles.price}>Price: ${price}</p>
             </Link>
             <span onClick={toggleFavourite} className={styles.star} style={{'--color-star': favourite ? '#FFD700' :' #ccc'}}>{favourite ? '★' : '☆'}</span>

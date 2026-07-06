@@ -28,9 +28,9 @@ export function Contact() {
                 <p>📞 +54 9 11 0000-0000</p>
             </div>
 
-            <div className={styles.socials}>
+            <div className={styles.socials} role="navigation" aria-label="Social media links">
                 {socials.map((s, i) => (
-                    <a key={i} href={s.url} target="_blank" rel="noreferrer" className={styles.socialLink}>
+                    <a key={i} href={s.url} target="_blank" rel="noreferrer" className={styles.socialLink} aria-label={`Visit our ${s.label} page`}>
                         {s.icon}
                         <span>{s.label}</span>
                     </a>
