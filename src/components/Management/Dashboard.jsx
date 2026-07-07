@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { db } from '../../firebase/config';
 import { FormContainer } from '../FormProduct/FormContainer';
 import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
-import styles from "./Management.module.css";
+import styles from "./Dashboard.module.css";
 import { LoadingSpinner } from "../Spinner/Spinner";
 import Pagination from "../Pagination/Pagination";
 

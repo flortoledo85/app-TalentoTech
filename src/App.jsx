@@ -9,7 +9,7 @@ import { Measurements } from "./components/Measurements/Measurements";
 import Cart from "./components/Cart/Cart";
 // import DetailsNationalProducts from "./components/ProductosNacionalesDetalle/DetailsNationalProducts";
 // import ProductosNacionales from "./components/ProductosNacionales/ProductosNacionales";
-import Managememt from "./components/Management/Management";
+import Dashboard from "./components/Management/Dashboard";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
@@ -32,7 +32,7 @@ function App() {
           <Route path="/contact" element={<Contact />}>Contact</Route>
           <Route path="/dashboard" element={
               <ProtectedRoute rolesAllowed={['admin']}>
-                <Managememt/>
+                <Dashboard/>
               </ProtectedRoute>
             }></Route>
           <Route path="/login" element={<Login/>}></Route>

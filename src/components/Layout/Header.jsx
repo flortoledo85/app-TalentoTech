@@ -50,7 +50,7 @@ function Header() {
                 {user && (
                     <>
                         {user.rol === 'admin' && (
-                            <Link to="/dashboard" onClick={() => setMenuOpen(false)}>Management</Link>
+                            <Link to="/dashboard" onClick={() => setMenuOpen(false)}>Dashboard</Link>
                         )}
                     </>
                 )}
