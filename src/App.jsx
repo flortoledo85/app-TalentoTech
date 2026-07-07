@@ -30,7 +30,7 @@ function App() {
           {/* <Route path="/upload" element={<FormContainer />}>Upload</Route> */}
           <Route path="/measurements" element={<Measurements />}>Measurements</Route>
           <Route path="/contact" element={<Contact />}>Contact</Route>
-          <Route path="/management" element={
+          <Route path="/dashboard" element={
               <ProtectedRoute rolesAllowed={['admin']}>
                 <Managememt/>
               </ProtectedRoute>
