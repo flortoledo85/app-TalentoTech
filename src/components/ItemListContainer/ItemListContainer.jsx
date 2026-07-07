@@ -41,16 +41,6 @@ export function ItemListContainer({ Mensaje }) {
                     }))
                 );
             })
-            // fetch('/data/productos.json')
-            // .then(res => {
-            //     if (!res.ok) {
-            //         throw new Error('No se pudo cargar la información de los productos')
-            //     }
-            //     return res.json();
-            // })
-            // .then(data => {
-            //     setProducto(data);
-            // })
             .catch(error => {
                 setError(error.message);
             })
@@ -66,7 +56,7 @@ export function ItemListContainer({ Mensaje }) {
         return <p className={styles.subitulo}>Error: {error}</p>;
     }
     return (
-        <div>
+        <div role="region" aria-label="Products list">
             <h2 className={styles.subtitulo}> {Mensaje} </h2>
             <div className={styles.container}>
                 <ItemList productos={productsPagination} />

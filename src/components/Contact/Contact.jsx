@@ -21,32 +21,34 @@ export function Contact() {
     return (
         <div className={styles.container}>
             <h2 className={styles.title}>Contact Us</h2>
-
-            <div className={styles.info}>
-                <p>📍 La Plata, Buenos Aires</p>
-                <p>✉️ contacto@opticchoices.com</p>
-                <p>📞 +54 9 11 0000-0000</p>
-            </div>
-
-            <div className={styles.socials} role="navigation" aria-label="Social media links">
-                {socials.map((s, i) => (
-                    <a key={i} href={s.url} target="_blank" rel="noreferrer" className={styles.socialLink} aria-label={`Visit our ${s.label} page`}>
-                        {s.icon}
-                        <span>{s.label}</span>
-                    </a>
-                ))}
-            </div>
-            <h3 className={styles.teamTitle}>Our Team</h3>
-            <div className={styles.team}>
-                <div className={styles.cards}>
-                    {team.map((profesional, index) => (
-                        <UserCard
-                            key={index}
-                            image={profesional.image}
-                            name={profesional.name}
-                            profile={profesional.profile}
-                        />
-                    ))}
+            <div className={styles.content}>
+                <div className={styles.leftSection}>
+                    <div className={styles.info}>
+                        <p>📍 La Plata, Buenos Aires</p>
+                        <p>✉️ contacto@opticchoices.com</p>
+                        <p>📞 +54 9 11 0000-0000</p>
+                    </div>
+                    <div className={styles.socials} role="navigation" aria-label="Social media links">
+                        {socials.map((s, i) => (
+                            <a key={i} href={s.url} target="_blank" rel="noreferrer" className={styles.socialLink} aria-label={`Visit our ${s.label} page`}>
+                                {s.icon}
+                                <span>{s.label}</span>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+                <div className={styles.rightSection}>
+                    <h3 className={styles.teamTitle}>Our Team</h3>
+                    <div className={styles.team}>
+                        {team.map((profesional, index) => (
+                            <UserCard
+                                key={index}
+                                image={profesional.image}
+                                name={profesional.name}
+                                profile={profesional.profile}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

@@ -42,7 +42,7 @@ function Header() {
                     </button>
                 </div>
             </div>
-            <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
+            <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`} aria-label="Main navigation">
                 <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
                 <Link to="/products" onClick={() => setMenuOpen(false)}>Products</Link>
                 <Link to="/measurements" onClick={() => setMenuOpen(false)}>Measurements</Link>
