@@ -134,3 +134,8 @@
   color: #0f0f0f;
   filter: drop-shadow(0 0 6px #FFD700);
 }
+
+.producto a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
