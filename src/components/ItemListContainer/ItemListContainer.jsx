@@ -17,7 +17,8 @@ export function ItemListContainer({ Mensaje }) {
     const productsForPage = 5
 
     const filteredProducts = productos.filter(prod => 
-        prod.name.toLowerCase().includes(search.toLowerCase())
+        prod.name.toLowerCase().includes(search.toLowerCase()) ||
+        prod.category.toLowerCase().includes(search.toLowerCase())
     );
 
     const productsPagination = filteredProducts.slice(

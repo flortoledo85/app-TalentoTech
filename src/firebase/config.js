@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAsUZrjCk1f4LmWH1b3CEY2Au3UcHp1XCo",
-  authDomain: "mi-commerce-talentotech.firebaseapp.com",
-  projectId: "mi-commerce-talentotech",
-  storageBucket: "mi-commerce-talentotech.firebasestorage.app",
-  messagingSenderId: "56564245726",
-  appId: "1:56564245726:web:52067fe5c1ffdb94ff4e4f"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 // Initialize Firebase

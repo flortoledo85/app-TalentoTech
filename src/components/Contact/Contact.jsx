@@ -1,5 +1,5 @@
 import React from "react";
-import { UserCard } from "../cards/UserCard";
+import { UserCard } from "../Cards/UserCard";
 import styles from "./Contact.module.css";
 import { FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
 

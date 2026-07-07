@@ -104,18 +104,24 @@ src/
 │   ├── Cart/
 │   ├── Contact/
 │   ├── FormProduct/
-│   ├── Header/
 │   ├── Home/
 │   ├── Item/
 │   ├── ItemList/
 │   ├── ItemListContainer/
+│   ├── Layout/
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Layout.jsx
+│   │   └── Navbar.jsx
+│   ├── Login/
 │   ├── Management/
+│   ├── Measurements/
 │   ├── Pagination/
 │   ├── ProductDetails/
 │   ├── ProtectedRoute/
 │   ├── Register/
-│   ├── Login/
-│   └── Spinner/
+│   ├── Spinner/
+│   └── cards/
 ├── context/
 │   ├── AuthContext.jsx
 │   ├── CartContext.jsx
@@ -129,7 +135,7 @@ src/
 
 ## ✨ Funcionalidades
 
-- 🛍️ Catálogo de productos con búsqueda y paginación
+- 🛍️ Catálogo de productos con búsqueda por nombre y categoria y paginación
 - 🛒 Carrito de compras
 - 🔐 Autenticación con Firebase
 - 👑 Panel de administración (CRUD completo)
