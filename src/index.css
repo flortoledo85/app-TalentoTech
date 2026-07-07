@@ -19,9 +19,8 @@ body {
   min-height: 100vh;
 }
 
-a {
-  color: white !important; 
-  text-decoration: none !important;
+a, a:hover, a:visited, a:active {
+    text-decoration: none !important;
 }
 
 p {
