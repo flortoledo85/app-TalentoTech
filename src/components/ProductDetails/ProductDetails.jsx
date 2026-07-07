@@ -72,6 +72,7 @@ const ProductDetail = () => {
                 <h2 className={styles.name}>{product.name}</h2>
                 <h3 className={styles.price}>${product.price}</h3>
                 <p className={styles.description}>{product.details}</p>
+                <p className={styles.price}>Category: {product.category}</p>
                 <p className={styles.price}>Stock: {product.stock}</p>
                 <div className={styles.counter}>
                     <button onClick={decrement}>-</button>
